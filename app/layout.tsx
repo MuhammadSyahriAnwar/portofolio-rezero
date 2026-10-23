@@ -21,7 +21,7 @@ const description =
 
 export const metadata: Metadata = {
   // TODO: ganti dengan alamat situs kamu setelah deploy ke Vercel
-  metadataBase: new URL("https://GANTI-DENGAN-DOMAIN-KAMU.vercel.app"),
+  metadataBase: new URL("https://portofolio-rezero.vercel.app/"),
   title,
   description,
   // Gambar pratinjau link: taruh file 1200x630 bernama app/opengraph-image.jpg, otomatis terpasang.
