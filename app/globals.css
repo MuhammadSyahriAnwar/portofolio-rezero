@@ -565,3 +565,36 @@ footer { min-height: 0; }
     border-radius: 130px 130px 12px 12px;
   }
 }
+/* ===== TEMPEL di PALING BAWAH app/globals.css (jangan hapus isi lama) ===== */
+/* Perbaikan tampilan HP */
+
+/* 1. Halaman tidak boleh melebar ke samping.
+   Elemen dekoratif (lingkaran latar hero, dll.) yang keluar dari layar membuat browser HP
+   "menciutkan" tampilan sehingga halaman bisa di-zoom out dan ada ruang kosong di kanan.
+   Baris pertama untuk browser lama, baris kedua (clip) untuk browser baru. */
+main { overflow-x: hidden; overflow-x: clip; }
+
+/* 2. Foto profil mengikuti rasio foto aslinya, dengan batas tinggi supaya tetap rapi */
+.hero-portrait { height: auto; min-height: 400px; max-height: 510px; }
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  max-height: 510px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (max-width: 680px) {
+  /* Bagian ilustrasi tidak lagi diperkecil (skala lama untuk kartu karakter) */
+  .hero-art { height: 430px; transform: none; }
+  .magic-circle { width: 340px; height: 340px; right: 50%; margin-right: -170px; top: 36px; }
+  .hero-portrait { width: 260px; min-height: 300px; max-height: 390px; bottom: 20px; }
+  .hero-photo { min-height: 300px; max-height: 390px; }
+
+  /* 3. Jendela foto (lightbox) pas di layar HP, tombol bawah tidak tertutup toolbar browser */
+  .lightbox { padding: 12px; gap: 10px; }
+  .lightbox-stage { height: min(64vh, 640px); height: min(64dvh, 640px); }
+  .lightbox-close, .lightbox-nav { width: 44px; height: 44px; }
+}

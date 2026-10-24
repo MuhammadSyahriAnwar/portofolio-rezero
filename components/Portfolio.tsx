@@ -238,10 +238,11 @@ export default function Portfolio({ media }: { media: PortfolioMedia }) {
               <Image
                 alt="Foto Muhammad Syahri Anwar"
                 className="hero-photo"
-                fill
+                height={0}
                 priority
                 sizes="(min-width: 950px) 340px, 260px"
                 src={media.profilePhoto}
+                width={0}
               />
             ) : (
               <span aria-hidden="true" className="hero-initials">MSA</span>
