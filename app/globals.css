@@ -598,3 +598,7 @@ main { overflow-x: hidden; overflow-x: clip; }
   .lightbox-stage { height: min(64vh, 640px); height: min(64dvh, 640px); }
   .lightbox-close, .lightbox-nav { width: 44px; height: 44px; }
 }
+  :root {
+     --font-cinzel: "Cinzel Variable", serif;
+     --font-poppins: "Poppins", sans-serif;
+   }

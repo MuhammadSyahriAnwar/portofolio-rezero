@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import { Cinzel, Poppins } from "next/font/google";
 import Script from "next/script";
+/* Font di-host sendiri lewat paket npm (tidak mengunduh dari Google saat dev maupun build) */
+import "@fontsource-variable/cinzel/wght.css";
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
 import "./globals.css";
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-cinzel",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-poppins",
-});
 
 const title = "Muhammad Syahri Anwar — Full Stack & Microservices Developer";
 const description =
@@ -21,7 +14,7 @@ const description =
 
 export const metadata: Metadata = {
   // TODO: ganti dengan alamat situs kamu setelah deploy ke Vercel
-  metadataBase: new URL("https://portofolio-rezero.vercel.app/"),
+  metadataBase: new URL("https://GANTI-DENGAN-DOMAIN-KAMU.vercel.app"),
   title,
   description,
   // Gambar pratinjau link: taruh file 1200x630 bernama app/opengraph-image.jpg, otomatis terpasang.
@@ -35,7 +28,7 @@ const umamiId = process.env.NEXT_PUBLIC_UMAMI_ID;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id" className={`${cinzel.variable} ${poppins.variable}`}>
+    <html lang="id">
       <body>
         {children}
         {umamiId && (
